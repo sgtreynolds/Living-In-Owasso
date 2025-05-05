@@ -1,0 +1,125 @@
+/* === General Page Styles === */
+body {
+  background: linear-gradient(to bottom right, #f0f8ff, #cce6ff);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Navigation Styles === */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: right;
+  display: block;
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #004080;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+  transform: scale(1.1);
+}
+
+/* === Clear Floats === */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* === Flexbox Layout === */
+.container-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.container-flex .section {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* === Grid Layout === */
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.container-grid .section {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* === Float Layout (Optional) === */
+.section {
+  float: left;
+  width: 30%;
+  margin: 1.66%;
+  box-sizing: border-box;
+}
+
+/* === Form Styles === */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.form-wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 150px;
+  margin-right: 10px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  flex: 1;
+  padding: 8px;
+  max-width: 400px;
+}
+
+/* === Responsive Form Layout === */
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+  }
+}

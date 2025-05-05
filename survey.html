@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owasso Community Survey</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="clearfix">
+  <ul>
+    <li><a href="survey.html">Survey</a></li>
+    <li><a href="living.html">Living in Owasso</a></li>
+    <li><a href="history.html">History & Growth</a></li>
+    <li><a href="index.html">Home</a></li>
+  </ul>
+</nav>
+
+<h2>Community Survey</h2>
+
+<!-- Styled container for form -->
+<div style="width: 60%; margin: 0 auto;">
+  <form action="submit-form.php" method="post">
+    <fieldset>
+      <legend>Visitor Information</legend>
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" maxlength="50">
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Survey Questions</legend>
+      <div class="form-group">
+        <label for="years">Years lived in Owasso</label>
+        <input type="number" id="years" name="years" min="0" max="100">
+      </div>
+      <div class="form-group">
+        <label for="feedback">Your Feedback</label>
+        <textarea id="feedback" name="feedback" rows="4"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="color">Pick your favorite background color:</label>
+        <input type="color" id="color" name="color">
+      </div>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2025 Living in Owasso | Follow us on social media!</p>
+  <a href="https://www.facebook.com" title="Visit us on Facebook">
+    <img src="images/facebook.png" alt="Facebook" width="30">
+  </a>
+  <a href="https://www.instagram.com" title="Visit us on Instagram">
+    <img src="images/instagram.png" alt="Instagram" width="30">
+  </a>
+  <a href="https://www.twitter.com" title="Visit us on Twitter">
+    <img src="images/twitter.png" alt="Twitter" width="30">
+  </a>
+</footer>
+
+</body>
+</html>
